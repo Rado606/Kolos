@@ -5,7 +5,7 @@
      }
      while(opcja != 1 && opcja != 2 && opcja != 3);
      cout << endl;
-     return opcja;  
+     return opcja; // 
 }
 
 //Funkcja pobierajaca ilosc minut i zwaracaja wartosc w sekundach

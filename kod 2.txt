@@ -49,3 +49,5 @@ int main(int argc, char *argv[])
      }
      while(opcja != 3);
      return EXIT_SUCCESS;
+
+// kod 2

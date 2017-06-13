@@ -33,3 +33,5 @@ int menu(){
      cout << " <1.> Atywacja wylacznika " << endl;
      cout << " <2.> Dezaktywacja wylacznika " << endl;
      cout << " <3.> Wyjscie " << endl;
+
+// kod 1

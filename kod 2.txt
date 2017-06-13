@@ -1,0 +1,51 @@
+ do{
+          cout << " Podaj wybrana opcje: ";
+          cin >> opcja;
+          if(opcja != 1 && opcja != 2 && opcja != 3) cout << " Wybrales zla opcje, sprobuj jeszce raz! " << endl;
+     }
+     while(opcja != 1 && opcja != 2 && opcja != 3);
+     cout << endl;
+     return opcja;  
+}
+
+//Funkcja pobierajaca ilosc minut i zwaracaja wartosc w sekundach
+void czas(){
+     cout << " Po jakim czasie (w min) komputer ma zostac wylaczony?" << endl;
+     do{
+          cin >> t;
+          if(t<1) cout << " Podales zla wartosc. Nalezy ustawic przynajmniej jedna minute. Sprobuj jescze raz :";
+     }
+     while(t<1);
+     t=t*60;
+     //return t;
+}
+
+int main(int argc, char *argv[])
+{
+     do
+     {
+     system("cls");
+     info();
+     menu();    
+     if(opcja == 1){
+          czas();
+          char czas[50];
+          itoa(t,czas,10);
+          string komenda;
+          komenda = "shutdown -s -t ";
+          komenda += czas;
+          system(komenda.c_str());
+          cout << " Nacisnij dowolny klawisz aby kontynuowac. " << endl;
+          char a;
+          a = getch();
+     }
+     else if(opcja == 2){
+          system("shutdown -a");
+          cout << endl;
+          cout << " Nacisnij dowolny klawisz aby kontynuowac. " << endl;
+          char a;
+          a = getch();
+     }
+     }
+     while(opcja != 3);
+     return EXIT_SUCCESS;
